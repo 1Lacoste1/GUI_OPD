@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="700.0" style="-fx-background-color: #06424d;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.testgui.EndOfRecordingController">
+    <children>
+        <AnchorPane layoutY="110.0" prefHeight="290.0" prefWidth="700.0" style="-fx-background-color: #fafafa;">
+            <children>
+                <Button fx:id="main_menu" layoutX="287.0" layoutY="183.0" mnemonicParsing="false" style="-fx-background-color: fa8500;" text="В главное меню" textFill="WHITE">
+                    <font>
+                        <Font size="15.0" />
+                    </font>
+                </Button>
+                <Label layoutX="605.0" layoutY="259.0" text="ИП Сафронов" />
+                <Label layoutX="216.0" layoutY="45.0" prefHeight="33.0" prefWidth="268.0" text="Запись клиента прошла успешно!" textFill="#727272">
+                    <font>
+                        <Font name="Noteworthy Light" size="19.0" />
+                    </font>
+                </Label>
+            <ImageView fx:id="check_mark" fitHeight="76.0" fitWidth="61.0" layoutX="320.0" layoutY="96.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="file:/Users/mac/Documents/TestGUI/src/main/java/images/free-icon-checkmark-1828520.png" />
+               </image>
+            </ImageView>
+            </children>
+        </AnchorPane>
+        <Label layoutX="255.0" layoutY="36.0" text="Автосервис" textFill="WHITE">
+            <font>
+                <Font name="ITFDevanagari-Book" size="36.0" />
+            </font>
+        </Label>
+    </children>
+</AnchorPane>

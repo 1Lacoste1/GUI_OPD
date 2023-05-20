@@ -12,6 +12,12 @@
     <children>
         <AnchorPane layoutY="110.0" prefHeight="290.0" prefWidth="700.0" style="-fx-background-color: #fafafa;">
             <children>
+                <Label layoutX="229.0" layoutY="14.0" prefHeight="33.0" prefWidth="243.0" text="Укажите дополнительную информацию : " textFill="#727272">
+                    <font>
+                        <Font name="Noteworthy Light" size="14.0" />
+                    </font>
+                </Label>
+            <TextField fx:id="brand_auto" layoutX="14.0" layoutY="57.0" prefHeight="33.0" prefWidth="198.0" promptText="Марка автомобиля*" />
                 <TextField fx:id="desc_problem" layoutX="14.0" layoutY="103.0" prefHeight="44.0" prefWidth="427.0" promptText="Описание поломки" />
                 <Button fx:id="next" layoutX="310.0" layoutY="210.0" mnemonicParsing="false" style="-fx-background-color: fa8500;" text="Далее" textFill="WHITE">
                     <font>
@@ -19,20 +25,10 @@
                     </font>
                 </Button>
                 <Label layoutX="605.0" layoutY="259.0" text="ИП Сафронов" />
-                <Label layoutX="229.0" layoutY="14.0" prefHeight="33.0" prefWidth="243.0" text="Укажите дополнительную информацию : " textFill="#727272">
-                    <font>
-                        <Font name="Noteworthy Light" size="14.0" />
-                    </font>
-                </Label>
-            <TextField fx:id="brand_auto" layoutX="14.0" layoutY="57.0" prefHeight="33.0" prefWidth="198.0" promptText="Марка автомобиля" />
-            <TextField fx:id="model" layoutX="242.0" layoutY="57.0" prefHeight="33.0" prefWidth="198.0" promptText="Модель" />
-            <Label layoutX="141.0" layoutY="147.0" text="*Необязательно для заполнения">
-               <font>
-                  <Font name="Ayuthaya" size="10.0" />
-               </font>
-            </Label>
+            <TextField fx:id="model" layoutX="242.0" layoutY="57.0" prefHeight="33.0" prefWidth="198.0" promptText="Модель*" />
             <ComboBox fx:id="radius_wheel" layoutX="459.0" layoutY="58.0" prefHeight="33.0" prefWidth="219.0" promptText="Радиус колеса" />
-            <DatePicker fx:id="date_issue" layoutX="459.0" layoutY="113.0" prefHeight="33.0" prefWidth="219.0" promptText="Дата выдачи авто" />
+            <DatePicker fx:id="date_recording" layoutX="459.0" layoutY="113.0" prefHeight="33.0" prefWidth="219.0" promptText="Дата записи*" />
+            <DatePicker fx:id="date_issue" layoutX="459.0" layoutY="161.0" prefHeight="33.0" prefWidth="219.0" promptText="Дата выдачи авто*" />
             </children>
         </AnchorPane>
         <Label layoutX="255.0" layoutY="36.0" text="Автосервис" textFill="WHITE">

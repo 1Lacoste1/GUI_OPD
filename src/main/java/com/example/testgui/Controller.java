@@ -3,6 +3,8 @@ package com.example.testgui;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+
+import animation.Shake;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -28,11 +30,20 @@ public class Controller {
 
     @FXML
     void initialize() {
-        sign_in.setOnAction(event -> {
-            sign_in.getScene().getWindow().hide();
+            sign_in.setOnAction(event -> {
+                if(password.getText().equals("1234")) {
+                    openNewScene("Menu.fxml");
+                } else {
+                    Shake userPassword = new Shake(password);
+                    userPassword.playAnim();
+                }
+            });
+        }
 
+        public void openNewScene(String correctXml) {
+            sign_in.getScene().getWindow().hide();
             FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(getClass().getResource("ClientInfo.fxml"));
+            loader.setLocation(getClass().getResource(correctXml));
 
             try {
                 loader.load();
@@ -40,12 +51,12 @@ public class Controller {
                 throw new RuntimeException(e);
             }
 
-
             Parent root = loader.getRoot();
             Stage stage = new Stage();
             Scene scene = new Scene(root);
             stage.setScene(scene);
             stage.show();
-        });
+        }
+
     }
-}
+

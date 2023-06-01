@@ -32,7 +32,7 @@ public class Controller {
     void initialize() {
             sign_in.setOnAction(event -> {
                 if(password.getText().equals("1234")) {
-                    openNewScene("Menu.fxml");
+                    openNewScene("ClientInfo.fxml");
                 } else {
                     Shake userPassword = new Shake(password);
                     userPassword.playAnim();

@@ -1,8 +1,14 @@
 package com.example.testgui;
 
+import javafx.beans.property.SimpleStringProperty;
+import javafx.beans.property.StringProperty;
+
 public class User {
-    private String number_phone, name,  date_recording, type_service, brand_auto;
+    private String number_phone, name, date_recording, type_service, brand_auto;
     private String date_issue, desc_problem, radius_wheel, model;
+
+    public User() {
+    }
 
     public User(String number_phone, String name, String type_service) {
         this.number_phone = number_phone;
@@ -59,14 +65,6 @@ public class User {
         this.brand_auto = brand_auto;
     }
 
-    public String getModel() {
-        return model;
-    }
-
-    public void setModel(String model) {
-        this.model = model;
-    }
-
     public String getDate_issue() {
         return date_issue;
     }
@@ -89,6 +87,19 @@ public class User {
 
     public void setRadius_wheel(String radius_wheel) {
         this.radius_wheel = radius_wheel;
+    }
+
+    public String getModel() {
+        return model;
+    }
+
+    public void setModel(String model) {
+        this.model = model;
+    }
+
+    @Override
+    public String toString() {
+        return name + ", " + number_phone + ", " + type_service;
     }
 }
 

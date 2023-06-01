@@ -6,6 +6,4 @@ public class Configs {
     protected String dbUser = "root";
     protected String dbPass = "12345678";
     protected String dbName = "Autoservice";
-
-
 }

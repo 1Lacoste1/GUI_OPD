@@ -26,7 +26,7 @@
                 </Button>
                 <Label layoutX="605.0" layoutY="259.0" text="ИП Сафронов" />
             <TextField fx:id="model" layoutX="242.0" layoutY="57.0" prefHeight="33.0" prefWidth="198.0" promptText="Модель*" />
-            <ComboBox fx:id="radius_wheel" layoutX="459.0" layoutY="58.0" prefHeight="33.0" prefWidth="219.0" promptText="Радиус колеса" />
+            <ComboBox fx:id="radius_wheel" layoutX="459.0" layoutY="58.0" prefHeight="33.0" prefWidth="219.0" promptText="Радиус колеса*" />
             <DatePicker fx:id="date_recording" layoutX="459.0" layoutY="113.0" prefHeight="33.0" prefWidth="219.0" promptText="Дата записи*" />
             <DatePicker fx:id="date_issue" layoutX="459.0" layoutY="161.0" prefHeight="33.0" prefWidth="219.0" promptText="Дата выдачи авто*" />
             </children>

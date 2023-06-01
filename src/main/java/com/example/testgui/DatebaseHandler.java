@@ -1,11 +1,14 @@
 package com.example.testgui;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+import javafx.scene.control.cell.PropertyValueFactory;
+
+import java.sql.*;
 
 public class DatebaseHandler extends Configs {
+
+    private User user = new User();
     Connection dbConnection;
     public Connection getDbConnection() throws ClassNotFoundException, SQLException {
         String connectionString = "jdbc:mysql://" + dbHost + ":" + dbPort + "/" + dbName;
@@ -32,15 +35,15 @@ public class DatebaseHandler extends Configs {
                 + ", " + Const.ADDITIONAL_INFO_DESC_PROBLEM + ", " + Const.ADDITIONAL_INFO_RADIUS_WHEEL + ")" +
                 "VALUES(?,?,?,?,?,?)";
 
-        PreparedStatement prSt2 = getDbConnection().prepareStatement(insertAdditionalInfo);
+        PreparedStatement prSt = getDbConnection().prepareStatement(insertAdditionalInfo);
 
-        prSt2.setString(1, user.getDate_recording());
-        prSt2.setString(2, user.getBrand_auto());
-        prSt2.setString(3, user.getModel());
-        prSt2.setString(4, user.getDate_issue());
-        prSt2.setString(5, user.getDesc_problem());
-        prSt2.setString(6, user.getRadius_wheel().toString());
+        prSt.setString(1, user.getDate_recording());
+        prSt.setString(2, user.getBrand_auto());
+        prSt.setString(3, user.getModel());
+        prSt.setString(4, user.getDate_issue());
+        prSt.setString(5, user.getDesc_problem());
+        prSt.setString(6, user.getRadius_wheel().toString());
 
-        prSt2.executeUpdate();
+        prSt.executeUpdate();
     }
 }
